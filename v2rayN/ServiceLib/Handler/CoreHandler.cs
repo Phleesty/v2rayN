@@ -70,23 +70,23 @@ namespace ServiceLib.Handler
                 await CoreStop();
                 await CoreStart(node);
 
-                //In tun mode, do a delay check and restart the core
-                //if (_config.tunModeItem.enableTun)
-                //{
-                //    Observable.Range(1, 1)
-                //    .Delay(TimeSpan.FromSeconds(15))
-                //    .Subscribe(x =>
-                //    {
-                //        {
-                //            if (_process == null || _process.HasExited)
-                //            {
-                //                CoreStart(node);
-                //                ShowMsg(false, "Tun mode restart the core once");
-                //                Logging.SaveLog("Tun mode restart the core once");
-                //            }
-                //        }
-                //    });
-                //}
+                In tun mode, do a delay check and restart the core
+                if (_config.tunModeItem.enableTun)
+                {
+                   Observable.Range(1, 1)
+                   .Delay(TimeSpan.FromSeconds(15))
+                   .Subscribe(x =>
+                   {
+                       {
+                           if (_process == null || _process.HasExited)
+                           {
+                               CoreStart(node);
+                               ShowMsg(false, "Tun mode restart the core once");
+                               Logging.SaveLog("Tun mode restart the core once");
+                           }
+                       }
+                   });
+                }
             }
         }
 
