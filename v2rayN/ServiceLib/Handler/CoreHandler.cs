@@ -70,7 +70,7 @@ namespace ServiceLib.Handler
                 await CoreStop();
                 await CoreStart(node);
 
-                In tun mode, do a delay check and restart the core
+                // In tun mode, do a delay check and restart the core
                 if (_config.tunModeItem.enableTun)
                 {
                    Observable.Range(1, 1)
