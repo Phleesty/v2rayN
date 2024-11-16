@@ -69,6 +69,11 @@ namespace ServiceLib.Handler
                 ShowMsg(true, $"{node.GetSummary()}");
                 await CoreStop();
                 await Task.Delay(100);
+            if (_config.TunModeItem.EnableTun)
+            {
+                Task.Delay(100).Wait();
+                WindowsUtils.RemoveTunDevice();
+            }
                 await CoreStart(node);
 
                 //In tun mode, do a delay check and restart the core
