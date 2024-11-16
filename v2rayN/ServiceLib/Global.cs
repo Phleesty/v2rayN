@@ -9,7 +9,7 @@
         public const string GithubApiUrl = "https://api.github.com/repos";
         public const string V2flyCoreUrl = "https://github.com/v2fly/v2ray-core/releases";
         public const string XrayCoreUrl = "https://github.com/XTLS/Xray-core/releases";
-        public const string NUrl = @"https://github.com/2dust/v2rayN/releases";
+        public const string NUrl = @"https://github.com/phleesty/v2rayN/releases";
         public const string MihomoCoreUrl = "https://github.com/MetaCubeX/mihomo/releases";
         public const string HysteriaCoreUrl = "https://github.com/apernet/hysteria/releases";
         public const string NaiveproxyCoreUrl = "https://github.com/klzgrad/naiveproxy/releases";
@@ -119,22 +119,22 @@
 
         public static readonly List<string> GeoFilesSources = new() {
             "",
-            @"https://github.com/runetfreedom/russia-v2ray-rules-dat/releases/latest/download/{0}.dat",
+            @"https://github.com/phleesty/v2ray-rules-dat/releases/latest/download/{0}.dat",
         };
 
         public static readonly List<string> SingboxRulesetSources = new() {
             "",
-            @"https://cdn.jsdelivr.net/gh/runetfreedom/russia-v2ray-rules-dat@release/sing-box/rule-set-{0}/{1}.srs",
+            @"https://cdn.jsdelivr.net/gh/phleesty/v2ray-rules-dat@release/sing-box/rule-set-{0}/{1}.srs",
         };
 
         public static readonly List<string> RoutingRulesSources = new() {
             "",
-            @"https://cdn.jsdelivr.net/gh/runetfreedom/russia-v2ray-custom-routing-list@main/v2rayN/template.json",
+            @"https://raw.githubusercontent.com/phleesty/v2ray-custom-routing-list/main/v2rayN/template.json",
         };
 
         public static readonly List<string> DNSTemplateSources = new() {
             "",
-            @"https://cdn.jsdelivr.net/gh/runetfreedom/russia-v2ray-custom-routing-list@main/v2rayN/",
+            @"https://cdn.jsdelivr.net/gh/phleesty/v2ray-custom-routing-list@main/v2rayN/",
         };
 
         public static readonly Dictionary<string, string> UserAgentTexts = new()
