@@ -70,7 +70,6 @@ namespace ServiceLib.Handler
                 ShowMsg(false, $"{Environment.OSVersion} - {(Environment.Is64BitOperatingSystem ? 64 : 32)}");
                 ShowMsg(false, string.Format(ResUI.StartService, DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")));
                 await CoreStop();
-                await Task.Delay(100);
             if (_config.TunModeItem.EnableTun)
             {
                 Task.Delay(100).Wait();
